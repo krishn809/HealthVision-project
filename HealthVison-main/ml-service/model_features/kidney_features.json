@@ -1,0 +1,22 @@
+{
+  "model_name": "kidney",
+  "min_match_ratio": 0.7,
+  "features": [
+    "Age_years",
+    "Blood_Pressure_mmHg",
+    "Specific_Gravity",
+    "Urine_Albumin",
+    "Urine_Sugar",
+    "Urine_RBC",
+    "Urine_Pus_Cell",
+    "Random_Blood_Glucose_mg_dL",
+    "Blood_Urea_mg_dL",
+    "Serum_Creatinine_mg_dL",
+    "Sodium_mEq_L",
+    "Potassium_mEq_L",
+    "Hemoglobin_g_dL",
+    "Packed_Cell_Volume",
+    "White_Blood_Cell_Count",
+    "Red_Blood_Cell_Count"
+  ]
+}

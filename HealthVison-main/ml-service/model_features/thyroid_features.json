@@ -1,0 +1,9 @@
+{
+  "model_name": "thyroid",
+  "min_match_ratio": 0.7,
+  "features": [
+    "TSH",
+    "TT4",
+    "FTI"
+  ]
+}

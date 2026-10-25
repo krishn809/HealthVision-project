@@ -1,0 +1,24 @@
+{
+  "model_name": "dengue",
+  "min_match_ratio": 0.7,
+  "features": [
+    "gender",
+    "age",
+    "hemoglobingdl",
+    "neutrophils",
+    "lymphocytes",
+    "monocytes",
+    "eosinophils",
+    "rbc",
+    "hct",
+    "mcvfl",
+    "mchpg",
+    "mchcgdl",
+    "rdw_cv",
+    "platelet_count",
+    "mpvfl",
+    "pdw",
+    "pct",
+    "wbc_count"
+  ]
+}
