@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Elixer AI - Biomarker Spatial Card Design
+   ========================================================================== */
+
+.card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: var(--shadow-spatial-md);
+  transition: var(--transition-spatial);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: var(--shadow-spatial-lg);
+  border-color: rgba(16, 185, 129, 0.28);
+}
+
+.card:active {
+  transform: scale(0.985);
+}
+
+/* Header Row */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-dark-900);
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.status_pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status_normal {
+  background: var(--green-tint-100);
+  color: var(--green-primary-hover);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status_borderline {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status_attention {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status_dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+/* Value Display */
+.value_row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: -6px;
+}
+
+.value_number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--green-dark-900);
+  font-family: 'Outfit', sans-serif;
+}
+
+.value_unit {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Spatial Range Slider Visualizer (Inspired by Reference image sliders) */
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.chart {
+  position: relative;
+  height: 12px;
+  background: rgba(240, 248, 245, 0.9);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.rangeBar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.25) 0%, rgba(52, 211, 153, 0.35) 100%);
+  border-radius: 999px;
+}
+
+/* Spatial Knob Indicator Dot (Just like the slider knob in reference) */
+.indicatorDot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3.5px solid var(--green-primary);
+  box-shadow: 0 2px 8px rgba(7, 40, 35, 0.25), 0 0 0 3px rgba(255, 255, 255, 0.8);
+  transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 3;
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.updatedDate {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.arrow {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--green-primary-hover);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .arrow {
+  color: var(--green-dark-800);
+  transform: translateX(4px);
+}

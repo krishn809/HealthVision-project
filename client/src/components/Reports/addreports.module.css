@@ -1,0 +1,402 @@
+/* ==========================================================================
+   Elixer AI - Add Report Wizard Spatial Design
+   ========================================================================== */
+
+.page_wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-spatial);
+  background-image: var(--bg-ambient-gradient);
+  background-attachment: fixed;
+  padding-bottom: 60px;
+  animation: spatialFadeIn 0.35s ease-out;
+}
+
+/* Floating Top Spatial Nav */
+.main_container {
+  max-width: 900px;
+  width: calc(100% - 32px);
+  margin: 16px auto 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-spatial-md);
+}
+
+.title_container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.brand_logo_circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #073832 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.title_container h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-dark-800);
+  margin: 0;
+}
+
+.white_btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--green-dark-700);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+  box-shadow: var(--shadow-spatial-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.white_btn:hover {
+  background: var(--green-tint-100);
+  border-color: var(--green-primary);
+  transform: translateY(-2px);
+}
+
+/* Wizard Container */
+.container {
+  max-width: 900px;
+  width: calc(100% - 32px);
+  margin: 28px auto 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-glass);
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: var(--shadow-spatial-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.backIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(240, 248, 245, 0.9);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  color: var(--green-dark-800);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-spatial);
+}
+
+.backIcon:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.backIcon:not(:disabled):hover {
+  background: var(--green-dark-800);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.header h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--green-dark-900);
+  margin: 0;
+}
+
+/* Spatial Step Progress Tracker */
+.progressContainer {
+  margin-bottom: 32px;
+}
+
+.stepHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.stepCount {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--green-dark-800);
+  margin: 0;
+}
+
+.stepStageName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  border-radius: 999px;
+  transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Step 1: Upload Instructions & File Button */
+.instructions {
+  font-size: 0.98rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  padding: 14px 18px;
+  background: rgba(240, 248, 245, 0.7);
+  border-radius: 16px;
+  border-left: 4px solid var(--green-primary);
+}
+
+.highlight {
+  font-weight: 700;
+  color: var(--green-dark-800);
+}
+
+.fileUploadWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 16px 0;
+}
+
+.fileButton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  padding: 40px 24px;
+  background: rgba(246, 251, 248, 0.85);
+  border: 2px dashed rgba(16, 185, 129, 0.35);
+  border-radius: 24px;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+  color: var(--green-dark-900);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.fileButton:hover {
+  background: #ffffff;
+  border-color: var(--green-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(16, 185, 129, 0.15);
+}
+
+.fileButton svg {
+  color: var(--green-primary);
+  width: 36px;
+  height: 36px;
+}
+
+.fileInput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fileHint {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* Steps 2 & 3: Options selection */
+.optionsContainer h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-dark-900);
+  margin: 0 0 20px 0;
+}
+
+.testOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.optionButton {
+  background: rgba(246, 251, 248, 0.8);
+  border: 1.5px solid rgba(16, 185, 129, 0.14);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+  box-shadow: var(--shadow-spatial-sm);
+}
+
+.optionButton:hover:not(:disabled) {
+  background: #ffffff;
+  transform: translateY(-3px);
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+}
+
+.selected {
+  background: var(--green-dark-800) !important;
+  color: #ffffff !important;
+  border-color: var(--green-dark-800) !important;
+  box-shadow: 0 8px 24px rgba(7, 40, 35, 0.3) !important;
+}
+
+.selected .testType {
+  color: #ffffff !important;
+}
+
+.selected .testDescription {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.testType {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--green-dark-900);
+  margin-bottom: 6px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.testDescription {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
+/* Step 4: Date Input */
+.dateInput {
+  background: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 14px;
+  font-size: 1rem;
+  color: var(--text-main);
+  outline: none;
+  transition: var(--transition-spatial);
+  box-shadow: var(--shadow-spatial-sm);
+}
+
+.dateInput:focus {
+  border-color: var(--green-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Step 5: TextArea */
+.textArea {
+  background: #ffffff;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 18px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  outline: none;
+  transition: var(--transition-spatial);
+  box-shadow: var(--shadow-spatial-sm);
+}
+
+.textArea:focus {
+  border-color: var(--green-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+/* Buttons Row */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.backButton {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--green-dark-800);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+}
+
+.backButton:hover:not(:disabled) {
+  background: var(--green-tint-100);
+  transform: translateY(-2px);
+}
+
+.backButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.nextButton {
+  background: linear-gradient(135deg, #073832 0%, #10b981 100%);
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+  transition: var(--transition-spatial);
+}
+
+.nextButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45);
+}
+
+.nextButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+}

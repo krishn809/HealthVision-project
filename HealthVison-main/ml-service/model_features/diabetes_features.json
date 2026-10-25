@@ -1,0 +1,11 @@
+{
+  "model_name": "diabetes",
+  "min_match_ratio": 0.7,
+  "features": [
+    "Glucose",
+    "BloodPressure",
+    "Insulin",
+    "BMI",
+    "Age"
+  ]
+}

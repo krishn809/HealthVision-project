@@ -1,0 +1,269 @@
+/* ==========================================================================
+   Elixer AI - Biomarker Expanded View Spatial Design
+   ========================================================================== */
+
+.page_wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-spatial);
+  background-image: var(--bg-ambient-gradient);
+  background-attachment: fixed;
+  padding-bottom: 60px;
+  animation: spatialFadeIn 0.35s ease-out;
+}
+
+/* Floating Top Spatial Nav */
+.main_container {
+  max-width: 1000px;
+  width: calc(100% - 32px);
+  margin: 16px auto 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-spatial-md);
+}
+
+.title_container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.brand_logo_circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #073832 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.title_container h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-dark-800);
+  margin: 0;
+}
+
+.white_btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--green-dark-700);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+  box-shadow: var(--shadow-spatial-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.white_btn:hover {
+  background: var(--green-tint-100);
+  border-color: var(--green-primary);
+  transform: translateY(-2px);
+}
+
+/* Page Container */
+.container {
+  max-width: 1000px;
+  width: calc(100% - 32px);
+  margin: 28px auto 0 auto;
+}
+
+.top_bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.backButton {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-glass);
+  color: var(--green-dark-800);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-spatial-sm);
+  transition: var(--transition-spatial);
+}
+
+.backButton:hover {
+  background: var(--green-dark-800);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Hero Detail Card */
+.header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 28px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-spatial-md);
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--green-dark-900);
+  margin: 0 0 8px 0;
+  text-transform: capitalize;
+}
+
+.header p {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+/* Metrics Pill Grid */
+.lastResult {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(16, 185, 129, 0.12);
+}
+
+.metric_pill {
+  background: rgba(240, 248, 245, 0.85);
+  padding: 12px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(16, 185, 129, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric_pill small {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.metric_pill strong {
+  font-size: 1.2rem;
+  color: var(--green-dark-900);
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Spatial Chart Container */
+.chartContainer {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 28px;
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-spatial-md);
+}
+
+.chartContainer h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-dark-900);
+  margin: 0 0 16px 0;
+}
+
+/* History List Section */
+.historyList {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow-spatial-md);
+  margin-bottom: 28px;
+}
+
+.historyList h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-dark-900);
+  margin: 0 0 18px 0;
+}
+
+.historyList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 16px;
+  background: rgba(246, 251, 248, 0.8);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  transition: var(--transition-spatial);
+}
+
+.history_card:hover {
+  background: #ffffff;
+  transform: translateX(4px);
+  box-shadow: var(--shadow-spatial-sm);
+}
+
+/* Talk to Elixer AI Action Button */
+.add_new_btn {
+  background: linear-gradient(135deg, #073832 0%, #10b981 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+  transition: var(--transition-spatial);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add_new_btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.45);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-body);
+}
+
+.error {
+  color: var(--status-critical);
+}

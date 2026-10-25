@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Elixer AI - Lab Reports List Spatial Design
+   ========================================================================== */
+
+.page_wrapper {
+  min-height: 100vh;
+  background-color: var(--bg-spatial);
+  background-image: var(--bg-ambient-gradient);
+  background-attachment: fixed;
+  padding-bottom: 60px;
+  animation: spatialFadeIn 0.35s ease-out;
+}
+
+/* Floating Top Spatial Nav */
+.main_container {
+  max-width: 960px;
+  width: calc(100% - 32px);
+  margin: 16px auto 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-spatial-md);
+}
+
+.title_container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.brand_logo_circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981 0%, #073832 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.title_container h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green-dark-800);
+  margin: 0;
+}
+
+.white_btn {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--green-dark-700);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+  box-shadow: var(--shadow-spatial-sm);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.white_btn:hover {
+  background: var(--green-tint-100);
+  border-color: var(--green-primary);
+  transform: translateY(-2px);
+}
+
+/* Page Container */
+.container {
+  max-width: 960px;
+  width: calc(100% - 32px);
+  margin: 28px auto 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.back_button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-glass);
+  color: var(--green-dark-800);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-spatial-sm);
+  transition: var(--transition-spatial);
+}
+
+.back_button:hover {
+  background: var(--green-dark-800);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.header h1 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--green-dark-900);
+  margin: 0;
+}
+
+/* Report Spatial Cards */
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-spatial-md);
+  transition: var(--transition-spatial);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-spatial-lg);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green-dark-900);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view_link {
+  background: var(--green-tint-100);
+  color: var(--green-primary-hover);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-spatial);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.view_link:hover {
+  background: var(--green-dark-800);
+  color: #ffffff;
+  border-color: var(--green-dark-800);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(7, 40, 35, 0.2);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.dateRow {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.date_pill {
+  background: rgba(240, 248, 245, 0.9);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  color: var(--text-body);
+  border: 1px solid rgba(16, 185, 129, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.date_pill strong {
+  color: var(--green-dark-800);
+}
+
+.error {
+  text-align: center;
+  padding: 30px;
+  color: var(--status-critical);
+  background: rgba(239, 68, 68, 0.08);
+  border-radius: 16px;
+  margin: 20px auto;
+  max-width: 600px;
+}

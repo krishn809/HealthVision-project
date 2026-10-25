@@ -1,0 +1,13 @@
+{
+  "model_name": "heart",
+  "min_match_ratio": 0.7,
+  "features": [
+    "age",
+    "sex",
+    "chest_pain",
+    "resting_bp",
+    "total_cholesterol",
+    "fasting_blood_sugar",
+    "ecg_findings"
+  ]
+}

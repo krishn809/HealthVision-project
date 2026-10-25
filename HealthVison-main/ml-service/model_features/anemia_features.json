@@ -1,0 +1,20 @@
+{
+  "model_name": "anemia",
+  "min_match_ratio": 0.7,
+  "features": [
+    "WBC",
+    "LYMp",
+    "NEUTp",
+    "LYMn",
+    "NEUTn",
+    "RBC",
+    "HGB",
+    "HCT",
+    "MCV",
+    "MCH",
+    "MCHC",
+    "PLT",
+    "PDW",
+    "PCT"
+  ]
+}

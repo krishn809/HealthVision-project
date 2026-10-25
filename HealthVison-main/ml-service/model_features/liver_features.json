@@ -1,0 +1,16 @@
+{
+  "model_name": "liver",
+  "min_match_ratio": 0.7,
+  "features": [
+    "Age",
+    "Gender",
+    "Total_Bilirubin",
+    "Direct_Bilirubin",
+    "Alkaline_Phosphatase",
+    "ALT",
+    "AST",
+    "Total_Proteins",
+    "Albumin",
+    "A_G_Ratio"
+  ]
+}
