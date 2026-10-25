@@ -1,0 +1,170 @@
+:root {
+  /* Interactive Green Palette (Derived from reference image) */
+  --green-dark-900: #04241f;
+  --green-dark-800: #073832;
+  --green-dark-700: #0b4a42;
+  --green-dark-600: #0f5c53;
+
+  --green-primary: #10b981;
+  --green-primary-hover: #059669;
+  --green-primary-light: #34d399;
+
+  --green-tint-50: #f2f9f6;
+  --green-tint-100: #e6f5f0;
+  --green-tint-200: #d1fae5;
+  --green-tint-300: #a7f3d0;
+
+  /* Spatial Ambient Canvas */
+  --bg-spatial: #f4f8f6;
+  --bg-ambient-gradient: radial-gradient(circle at 15% 15%, rgba(16, 185, 129, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(13, 74, 66, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.7) 0%, transparent 100%),
+    #f4f8f6;
+
+  /* Spatial Glass Surfaces */
+  --surface-card: rgba(255, 255, 255, 0.82);
+  --surface-card-solid: #ffffff;
+  --surface-card-glass: rgba(255, 255, 255, 0.65);
+  --surface-card-dark: linear-gradient(145deg, #073832 0%, #0d4a43 55%, #052b26 100%);
+
+  /* Text & Hierarchy */
+  --text-main: #0c2b27;
+  --text-body: #3c5e59;
+  --text-muted: #7c9893;
+  --text-light: #ffffff;
+
+  /* Borders & Highlights */
+  --border-glass: rgba(255, 255, 255, 0.85);
+  --border-subtle: rgba(16, 185, 129, 0.12);
+  --border-dark: rgba(255, 255, 255, 0.12);
+
+  /* Spatial Layered Shadows */
+  --shadow-spatial-sm: 0 4px 14px rgba(11, 46, 39, 0.04), 0 1px 2px rgba(11, 46, 39, 0.02);
+  --shadow-spatial-md: 0 12px 32px rgba(11, 46, 39, 0.06), 0 2px 6px rgba(11, 46, 39, 0.03);
+  --shadow-spatial-lg: 0 20px 48px rgba(11, 46, 39, 0.08), 0 4px 12px rgba(11, 46, 39, 0.04);
+  --shadow-spatial-dark: 0 16px 40px rgba(7, 40, 35, 0.28), 0 4px 12px rgba(7, 40, 35, 0.15);
+  --shadow-inner-bevel: inset 0 1px 1px rgba(255, 255, 255, 0.95), inset 0 -1px 2px rgba(16, 185, 129, 0.04);
+
+  /* Accents & Status */
+  --status-normal: #10b981;
+  --status-warning: #f59e0b;
+  --status-critical: #ef4444;
+  --accent-coral: #ff5e57;
+
+  /* Transitions */
+  --transition-spatial: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.18s ease;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-spatial);
+  background-image: var(--bg-ambient-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+button {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(240, 248, 245, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.25);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.45);
+}
+
+/* Text Selection */
+::selection {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--green-dark-800);
+}
+
+/* Animations */
+@keyframes spatialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spatialPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    box-shadow: 0 0 16px rgba(16, 185, 129, 0.45);
+  }
+}
+
+@keyframes breatheGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.35);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes subtleFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}

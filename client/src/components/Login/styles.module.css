@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Elixer AI - Login Spatial Design
+   ========================================================================== */
+
+.login_container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-spatial);
+  background-image: var(--bg-ambient-gradient);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: spatialFadeIn 0.35s ease-out;
+}
+
+.login_form_container {
+  width: 940px;
+  min-height: 540px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--border-glass);
+  border-radius: 32px;
+  box-shadow: 0 24px 60px rgba(7, 40, 35, 0.12), 0 4px 16px rgba(7, 40, 35, 0.04);
+  overflow: hidden;
+  transition: var(--transition-spatial);
+}
+
+.login_form_container:hover {
+  box-shadow: 0 32px 72px rgba(7, 40, 35, 0.16);
+}
+
+.left {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: transparent;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+.brand_badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green-tint-100);
+  color: var(--green-primary-hover);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.form_container h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--green-dark-900);
+  margin: 0 0 6px 0;
+  text-align: center;
+}
+
+.form_subtitle {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  margin: 0 0 28px 0;
+  text-align: center;
+}
+
+.input {
+  outline: none;
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 999px;
+  background-color: rgba(246, 251, 248, 0.8);
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: var(--transition-spatial);
+}
+
+.input:focus {
+  background-color: #ffffff;
+  border-color: var(--green-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.error_msg {
+  width: 100%;
+  padding: 12px 18px;
+  margin: 10px 0;
+  font-size: 0.88rem;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* Right Side: Hero Emerald Panel (Reference image aesthetic) */
+.right {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: linear-gradient(145deg, #073832 0%, #0d4a43 60%, #052b26 100%);
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.right::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
+  top: -50px;
+  right: -50px;
+  border-radius: 50%;
+}
+
+.right h1 {
+  margin: 0 0 12px 0;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
+}
+
+.right p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0 0 28px 0;
+  max-width: 300px;
+  position: relative;
+  z-index: 2;
+}
+
+.white_btn,
+.green_btn {
+  border: none;
+  outline: none;
+  padding: 13px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+  position: relative;
+  z-index: 2;
+}
+
+.green_btn {
+  background: linear-gradient(135deg, #073832 0%, #10b981 100%);
+  color: #ffffff;
+  width: 100%;
+  margin-top: 14px;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+}
+
+.green_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.5);
+}
+
+.green_btn:active {
+  transform: scale(0.97);
+}
+
+.white_btn {
+  background-color: #ffffff;
+  color: var(--green-dark-800);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.white_btn:hover {
+  background-color: var(--green-tint-100);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+}
+
+.white_btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 768px) {
+  .login_form_container {
+    flex-direction: column-reverse;
+    width: 100%;
+    min-height: auto;
+  }
+  .left, .right {
+    padding: 32px 24px;
+  }
+}
+
+.demo_card {
+  width: 100%;
+  margin-top: 18px;
+  background: var(--green-tint-50);
+  border: 1px dashed rgba(16, 185, 129, 0.35);
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.demo_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.demo_badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--green-primary-hover);
+}
+
+.demo_fill_btn {
+  background: var(--green-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-spatial);
+}
+
+.demo_fill_btn:hover {
+  background: var(--green-primary-hover);
+  transform: translateY(-1px);
+}
+
+.demo_credentials {
+  font-size: 0.82rem;
+  color: var(--text-body);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.demo_credentials code {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: monospace;
+  color: var(--green-dark-800);
+  font-weight: 600;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
